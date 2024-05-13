@@ -15,4 +15,4 @@ le depot contient :
 
 L'utilisation du site est aussi simple pour le propriétaire que le client. 
 
-(capture du site)[images/capture.jpeg]
+(!capture du site)[images/capture.jpeg]
