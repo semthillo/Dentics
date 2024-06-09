@@ -1089,7 +1089,10 @@ hr{
     font-size: 1rem;
 }
 
-
+#head  i{
+    display: none;
+    
+}
 /* RESPONSIVE */
 
 @media (max-width:590px){
@@ -1112,7 +1115,8 @@ hr{
         width: 150px;
      }
      
-     #head a i{
+     #head  i{
+        display: block;
         font-size: 30px;
         position: relative;
         top: 30px;

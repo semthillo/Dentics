@@ -5,6 +5,7 @@ il s'agit d'un site web statique pour un clique dentaire.
 ### le site web est créé avec :
 1. HTML
 2. CSS
+3. JS
 
 le depot contient :
 
@@ -12,7 +13,10 @@ le depot contient :
 2. Un fichier READEME.md
 3. Un dossier Image
 4. Un dossier CSS
+5. Un fichier signup.html
+6. Un fichier login.html
+7. n fichier script.js
 
 L'utilisation du site est aussi simple pour le propriétaire que le client. 
 
-![capture du site](images/capture.jpeg)
+![capture de la page d'accueil](images/images/Capture1.jpeg)
