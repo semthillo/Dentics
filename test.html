@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation du Champ sans Regex</title>
+  <style>
+    .error {
+      border-color: red; /* Bordure rouge pour les erreurs */
+    }
+    .success {
+      border-color: green; /* Bordure verte pour le succès */
+    }
+  </style>
+</head>
+<body>
+
+  <form id="myForm">
+    <label for="numberField">Entrez un numéro :</label>
+    <input type="text" id="numberField" maxlength="8" placeholder="8 chiffres, commence par 2, 3 ou 4">
+    <p id="error-message" style="color: red;"></p> <!-- Message d'erreur ici -->
+    <button type="submit">Soumettre</button>
+  </form>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const numberField = document.getElementById('numberField');
+      const form = document.getElementById('myForm');
+      const errorMessage = document.getElementById('error-message');
+
+      // Fonction qui valide l'entrée sans utiliser d'expressions régulières
+      const validateNumber = () => {
+        const value = numberField.value; // Récupère la valeur du champ
+        let isValid = true; // Drapeau pour la validité
+
+        // Vérifier que la longueur est exactement de 8 chiffres
+        if (value.length !== 8) {
+          isValid = false;
+        }
+
+        // Vérifier que le premier caractère est 2, 3 ou 4
+        const firstChar = value.charAt(0);
+        if (firstChar !== '2' && firstChar !== '3' && firstChar !== '4') {
+          isValid = false;
+        }
+
+        // Vérifier que tous les caractères sont des chiffres
+        for (let i = 0; i < value.length; i++) {
+          const char = value.charAt(i);
+          if (char < '0' || char > '9') {
+            isValid = false;
+            break; // Si un caractère n'est pas un chiffre, on arrête la vérification
+          }
+        }
+
+        // Mettre à jour les classes CSS et le message d'erreur
+        if (isValid) {
+          numberField.classList.add('success');
+          numberField.classList.remove('error');
+          errorMessage.textContent = '';
+        } else {
+          numberField.classList.add('error');
+          numberField.classList.remove('success');
+          errorMessage.textContent = 'Le numéro doit avoir exactement 8 chiffres et commencer par 2, 3 ou 4.';
+        }
+
+        return isValid; // Retourne si la validation est correcte ou non
+      };
+
+      // Valider le champ chaque fois que l'utilisateur tape quelque chose
+      numberField.addEventListener('input', validateNumber);
+
+      // Valider lors de la soumission du formulaire
+      form.addEventListener('submit', (event) => {
+        if (!validateNumber()) {
+          event.preventDefault(); // Empêche la soumission si la validation échoue
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+    //     const numberField = document.getElementById('phone-tel');
+    //     const form = document.getElementById('myForm');
+    //     const errorMessage = document.getElementById('error-message');
+        
+    //     // Expression régulière pour valider le champ
+    //     const regex = /^[234]\d{7}$/;
+    
+    //     // Fonction qui valide l'entrée
+    //     const validateNumber = () => {
+    //       const value = numberField.value; // Récupère la valeur de l'entrée
+    //       const isValid = regex.test(value); // Vérifie si la valeur correspond à la regex
+    
+    //       if (isValid) {
+    //         numberField.classList.add('success'); // Ajoute la classe 'success' si c'est valide
+    //         numberField.classList.remove('error'); // Enlève la classe 'error' si elle est présente
+    //         errorMessage.textContent = ''; // Efface le message d'erreur
+    //       } else {
+    //         numberField.classList.add('error'); // Ajoute la classe 'error' si ce n'est pas valide
+    //         numberField.classList.remove('success'); // Enlève la classe 'success' si elle est présente
+    //         errorMessage.textContent = 'Le numéro doit avoir exactement 8 chiffres et commencer par 2, 3 ou 4.'; // Affiche le message d'erreur
+    //       }
+    
+    //       return isValid; // Retourne si la validation est correcte ou non
+    //     };
+    
+    //     // Valider le champ chaque fois que l'utilisateur tape quelque chose
+    //     numberField.addEventListener('input', validateNumber);
+    
+    //     // Valider lors de la soumission du formulaire
+    //     form.addEventListener('submit', (event) => {
+    //       if (!validateNumber()) {
+    //         event.preventDefault(); // Empêche la soumission si la validation échoue
+    //       }
+    //     });
+    //   });
+    
+    
+    // document.addEventListener('DOMContentLoaded', () => {
+    //     const numberField = document.getElementById('phone-tel');
+    //     const form = document.getElementById('myForm');
+    //     const errorMessage = document.getElementById('error-message');
+    
+    //     // Fonction qui valide l'entrée sans utiliser d'expressions régulières
+    //     const validateNumber = () => {
+    //       const value = numberField.value; // Récupère la valeur du champ
+    //       let isValid = true; // Drapeau pour la validité
+    
+    //       // Vérifier que la longueur est exactement de 8 chiffres
+    //       if (value.length !== 8) {
+    //         isValid = false;
+    //       }
+    
+    //       // Vérifier que le premier caractère est 2, 3 ou 4
+    //       const firstChar = value.charAt(0);
+    //       if (firstChar !== '2' && firstChar !== '3' && firstChar !== '4') {
+    //         isValid = false;
+    //       }
+    
+    //       // Vérifier que tous les caractères sont des chiffres
+    //       for (let i = 0; i < value.length; i++) {
+    //         const char = value.charAt(i);
+    //         if (char < '0' || char > '9') {
+    //           isValid = false;
+    //           break; // Si un caractère n'est pas un chiffre, on arrête la vérification
+    //         }
+    //       }
+    
+    //       // Mettre à jour les classes CSS et le message d'erreur
+    //       if (isValid) {
+    //         numberField.classList.add('success');
+    //         numberField.classList.remove('error');
+    //         errorMessage.textContent = '';
+    //       } else {
+    //         numberField.classList.add('error');
+    //         numberField.classList.remove('success');
+    //         errorMessage.textContent = 'Le numéro doit avoir exactement 8 chiffres et commencer par 2, 3 ou 4.';
+    //       }
+    
+    //       return isValid; // Retourne si la validation est correcte ou non
+    //     };
+    //      // Valider le champ chaque fois que l'utilisateur tape quelque chose
+    //      numberField.addEventListener('input', validateNumber);
+    
+    //      // Valider lors de la soumission du formulaire
+    //      form.addEventListener('submit', (event) => {
+    //        if (!validateNumber()) {
+    //          event.preventDefault(); // Empêche la soumission si la validation échoue
+    //        }
+    //      });
+    
+    // });
+    
+    
+    // function validate(){
+    //     let mail = document.getElementById("text").value;
+    //     let regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+    //     if(regx.text(mail)){
+    //         alert("email validé")
+    //         return true;
+    //     }
+    //     else{
+    //         alert("email invalid")
+    //         return false;
+    //     }
+    // }
+    
+    
+    
+    // var emailField = document.getElementById("email-field");
+    // var emailLabel = document.getElementById("email-label");
+    // var emailError = document.getElementById("email-error"); 
+    // function validateEmail(){
+    //      if(!emailField.Value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+    //         emailError.innerHTML = "email invalide";
+    //         return false;
+    
+    //      }
+    
+    // }
+    
+    
+    
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const numberField = document.getElementById('numberField');
+        const form = document.getElementById('myForm');
+        const errorMessage = document.getElementById('error-message');
+        const emailField = document.getElementById('emailField');
+       
+        const emailErrorMessage = document.getElementById('email-error');
+    
+        // Fonction qui valide l'entrée sans utiliser d'expressions régulières
+        const validateNumber = () => {
+          const value = numberField.value; // Récupère la valeur du champ
+          let isValid = true; // Drapeau pour la validité
+    
+          // Vérifier que la longueur est exactement de 8 chiffres
+          if (value.length !== 8) {
+            isValid = false;
+          }
+    
+          // Vérifier que le premier caractère est 2, 3 ou 4
+          const firstChar = value.charAt(0);
+          if (firstChar !== '2' && firstChar !== '3' && firstChar !== '4') {
+            isValid = false;
+          }
+    
+          // Vérifier que tous les caractères sont des chiffres
+          for (let i = 0; i < value.length; i++) {
+            const char = value.charAt(i);
+            if (char < '0' || char > '9') {
+              isValid = false;
+              break; // Si un caractère n'est pas un chiffre, on arrête la vérification
+            }
+          }
+    
+          // Mettre à jour les classes CSS et le message d'erreur
+          if (isValid) {
+            numberField.classList.add('success');
+            numberField.classList.remove('error');
+            errorMessage.textContent = '';
+          } else {
+            numberField.classList.add('error');
+            numberField.classList.remove('success');
+            errorMessage.textContent = 'Le numéro doit avoir exactement 8 chiffres et commencer par 2, 3 ou 4.';
+          }
+    
+          return isValid; // Retourne si la validation est correcte ou non
+        };
+    
+        // Valider le champ chaque fois que l'utilisateur tape quelque chose
+        numberField.addEventListener('input', validateNumber);
+    
+        // Valider lors de la soumission du formulaire
+        form.addEventListener('submit', (event) => {
+          if (!validateNumber()) {
+            event.preventDefault(); // Empêche la soumission si la validation échoue
+          }
+        });
+    
+    
+    
+    
+        const validateEmail = () => {
+            const value = emailField.value;
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex pour valider le format de l'email
+            const isValid = regex.test(value);
+    
+            if (isValid) {
+              emailField.classList.add('success');
+              emailField.classList.remove('error');
+              emailErrorMessage.textContent = '';
+            } else {
+              emailField.classList.add('error');
+              emailField.classList.remove('success');
+              emailErrorMessage.textContent = 'Veuillez entrer une adresse email valide.';
+            }
+    
+            return isValid;
+          };
+    
+          // Valider le champ numéro chaque fois que l'utilisateur tape quelque chose
+          numberField.addEventListener('input', validateNumber);
+    
+          // Valider le champ email chaque fois que l'utilisateur tape quelque chose
+          emailField.addEventListener('input', validateEmail);
+    
+          // Valider lors de la soumission du formulaire
+          form.addEventListener('submit', (event) => {
+            const isNumberValid = validateNumber();
+            const isEmailValid = validateEmail();
+    
+            if (!isNumberValid || !isEmailValid) {
+              event.preventDefault(); // Empêche la soumission si l'un des champs n'est pas valide
+            }
+          });
+    
+    
+      });  
+    

@@ -1,6 +1,6 @@
 :root{
-    --primary: #007bff;
-    --lightprimary: #0056b3;
+    --primary: #516EFF;
+    --lightprimary: #516EFF;
     --white: #ffffff;
     --silver: #bcbcbc9e;
     --defaultLinkColor: #333;
@@ -24,16 +24,17 @@ li{
 }
 body{
     align-items: center;
-    overflow-x: hidden;
+    overflow-x: hidden; 
     margin-top:0;
     padding:0 ;
-   
+   margin: 0;
     
 } 
 #head{
     border-bottom: 1px solid var(--silver);
-    margin-right:80px ;
-    margin-left: 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+    width: 100%;
 }
 #entete{
     
@@ -42,13 +43,14 @@ body{
     margin-top: 30px;
     margin-bottom: 10px;
     
+    
 }
 
 #entete .logo img{
-    width: 180px;
+    width: 80%;
 }
 #entete ul{
-    margin-left: 200px;
+    margin-left: 30%px;
     display: flex;
     
 }
@@ -67,7 +69,7 @@ body{
     border: #007bff;
     height: 40px;
     border-radius: 5px ;
-    width: 143px;
+    width: 10%;
     color: var(--white);
    background-color: var(--lightprimary);
     
@@ -83,17 +85,21 @@ body{
 
 #service{
     display: flex;
+    justify-content: space-between;
     margin-bottom: 60px;
     margin-top: 60px;
     margin-left: 0;
     margin-right: 0;
     width: 100%;
+    
 }
 
 #service .left{
-    margin-left: 80px;
+    
     width: 50%;
     margin-top: 50px;
+    position: relative;
+    left: 5%;
     
 }
 #service .left h1{
@@ -102,6 +108,7 @@ body{
     font-weight: bold;
     flex-wrap: wrap;
     margin-bottom: 30px;
+    width: 100%;
    
 }
 #service .left h1 span{
@@ -118,13 +125,16 @@ body{
 }
 
 #service .left .bttn button{
-    width: 125px;
-    height: 40px;
+    width: 30%;
+    height: 7vh;
     margin-right: 40px;
     border-radius: 5px;
-    border: 1px solid var(--muted);
+    border: 1px solid var(--primary);
+    background-color: var(--lightprimary);
+    color: var(--white);
+    font-size: 70%;
 }
-#service .left .bttn button:first-child{
+/* #service .left .bttn button:first-child{
     background-color: var(--lightprimary);
     color: var(--white);
     font-size: 11px;
@@ -133,14 +143,19 @@ body{
     background-color: var(--white);
     font-size: 11px;
     color: var(--muted);
-}
+} */
 #service .right img{
-    width: 550px;
+    width:80%;
+    
+    border-radius: 20px;
+    position: relative;
+    left: 9%;
 
 }
-#service .right {
-    margin-right: 145px;
-}
+ #service .right {
+    position: relative;
+    width: 50%;
+} 
 #service .left .bttn button:hover{
     background-color: var(--primary);
     cursor: pointer;
@@ -215,6 +230,7 @@ body{
     
 }
 #Provide .img{
+    width: 50%;
     
     background-color: #fcfafa;
     padding-top: 80px;
@@ -224,8 +240,8 @@ body{
 }
 
 #Provide .img img{
-   width: 405px;
-   margin-left: 80px;
+   width: 80%;
+   margin-left: 20%;
 }
 #Provide .list{
     display: grid;
@@ -263,9 +279,13 @@ body{
     grid-column: 2;
     grid-row: 3;
 }
+
 .element8{
     grid-column: 2;
     grid-row: 4;
+}
+.element8 img{
+    width: 40px;
 }
 .provide{
     margin-left: 120px;
@@ -291,7 +311,7 @@ body{
     margin-left: 10px;
     margin-bottom: 10px;
     font-weight: 550;
-    font-size: 1.1rem;
+    font-size: 100%;
     color: var(--defaultLinkColor);
     
 }
@@ -300,37 +320,44 @@ body{
 #special{
     
     line-height: 0;
+    width: 100%;
     
     
 }
 #special .text h3{
-    margin-bottom: 0;
-   
+    margin-bottom: 10px;
+    margin-top: 40px;
+   text-align: center;
     font-size: 1.7rem;
     font-weight: 550;
     color:var(--defaultLinkColor) ;
 }
+#special .text h3 span{
+    font-size: 1.7rem;
+    font-weight: 550;
+    color: #FFD700;
+}
 
-#special .text{
+/* #special .text{
     position: relative;
     display: flex;
     padding-bottom: 0;
     margin-left: 40px;
     
-}
-#special .text h2{
+} */
+/* #special .text h2{
     font-weight: bold;
     margin-left: 750px;
     margin-top: 50px;
     margin-bottom: 0;
-}
-#meet #special .text h2{
+} */
+/* #meet #special .text h2{
     margin-left: 608px;
 }
 #special .text h2 span{
     color: var(--yellow);
     font-weight: bold;
-}
+} */
 
 #special .specials{
     display: flex;
@@ -342,7 +369,8 @@ body{
     position: relative;
     border: 1px solid var(--muted);
     opacity: 0.4;
-    width: 900px;
+    width: 100%;
+    margin-bottom: 30px;
     
     
     margin-top: 20px;
@@ -367,7 +395,8 @@ body{
     grid-template-rows: repeat(2, 1fr);
     column-gap: 10px;
     row-gap: 30px;
-    margin-left: 90px;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 70px;
 }
 .elements .tem{
@@ -376,7 +405,7 @@ body{
     border-radius: 10px;
     text-align: center;
     padding: 20px;
-    width: 295px;
+    width: 20%px;
     height: 240px;
     line-height: 1.1;
 }
@@ -385,6 +414,18 @@ body{
     margin-top: 10px;
     
 
+}
+.elements .item5 img{
+    width: 100px;
+    margin-top: 20px;
+}
+.elements .item6 img{
+    width: 65px;
+    
+}
+.elements .item3 img{
+    width: 65px;
+    
 }
 .elements .tem h6{
     font-weight: 600;
@@ -400,7 +441,7 @@ body{
     color: var(--muted);
 }
 
-#smile{
+/* #smile{
     background-color: var(--primary);
     margin: 0;
     text-align: center;
@@ -439,28 +480,35 @@ body{
 #smile button:hover{
     background-color: var(--lightprimary);
     cursor: pointer;
-}
+} */
 #history{
+
    
     margin-bottom: 70px;
 }
 #history hr{
-    margin-left: 140px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 900px ;
+    
+    opacity: 0.4;
+    width:100% ;
     height: 2px;
-}
+    position: relative;
+    bottom: 30px;
+}  
+
+
+
+
 
 .title-hitory{
+    display: flex;
+    flex-direction: column;
+    
     margin-bottom: 0;
 }
 .title-hitory .first{
-    margin-left: 138px;
+   text-align: center;
     margin-bottom: 0;
-    display: inline-flex;
     
-    justify-content: space-between;
 }
 .title-hitory .first span{
     color: var(--yellow);
@@ -472,24 +520,20 @@ body{
     margin-bottom:0 ;
     
 }
-.title-hitory .first h3{
-   font-size: 1.6rem;
-    margin-bottom: 0;
-    margin-left: 700px;
-}
+
 .title-hitory .second{
     display: inline-flex;
     margin-bottom: 0;
     height: 90px;
    
 }
-.title-hitory .second h3{
+/* .title-hitory .second h3{
     margin-top: 0;
     margin-bottom: 180px;
     font-size: 2rem;
     font-weight: 600;
     position: relative;
-}
+} */
 
 .our-history{
     display: flex;
@@ -497,7 +541,7 @@ body{
     justify-content: space-evenly;
 }
 .our-history img{
-    width: 400px;
+    width: 40%;
 }
 
 .our-history .our{
@@ -505,11 +549,11 @@ body{
     padding: 40px;
     padding-top: 30px;
     background-color: var(--whiteBG);
-    width: 500px;
+    width: 35%;
     border-radius: 15px;
-    height: 265px;
+    height: auto;
     position: relative;
-   right: 80px;
+   
    
 }
 .our-history .our h4{
@@ -517,35 +561,51 @@ body{
 }
 
 .our-history .our{
-    font-size: 15px;
+    font-size: 80%;
     color: var(--muted);
+    line-height: 2;
 }
 #meet{
     background-color: var(--whiteBG);
-    height: 500px;
+   height: 40vh;
     padding-top: 60px;
     padding-bottom: 550px;
     margin: 0;
+    width: 100%;
 }
 #meet .specials hr{
-    width: 1000px;
+    width: 100%;
 }
 #meet .doctor{
     display: flex;
-    margin-left: 140px;
-    margin-right: 130px;
+    margin-left: 14%;
+    margin-right: 14%;
 
+}
+#meet #special .text h2{
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+}
+#meet #special .text h2 span{
+    color: var(--yellow);
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 #meet .doctor div{
     text-align: center;
-    width: 160px;
-    margin-left: 80px;
+    width: 30%;
+    border: 1px solid var(--silver);
+    border-radius: 20px;
+    margin-left: 5%;
+    padding-bottom: 15px;
+   
     
 }
 
 #meet .doctor div img{
-    width: 160px;
+    width: 60%;
 }
 
 #meet .doctor div h5{
@@ -553,7 +613,7 @@ body{
     margin-bottom: 0;
 }
 #meet .doctor div p{
-    font-size: 13px;
+    font-size: 80%;
     color: var(--muted);
     line-height: 1.3;
 }
@@ -561,18 +621,18 @@ body{
 #meet .doctor div button{
     color: var(--primary);
     height: 40px;
-    width: 150px;
+    width: 75%;
     border: 1px solid var(--primary);
     background-color: var(--whiteBG);
     border-radius: 5px;
-    margin-top: 10px;
+    
 }
 #meet .doctor div button:hover{
     background-color: var(--lightprimary);
     color: white;
 }
 
-#client-says{
+/* #client-says{
     background-color: var(--lightprimary);
     margin: 0;
     display: flex;
@@ -610,48 +670,51 @@ body{
     font-size: 2rem;
     font-weight: 600;
     color: var(--silver);
-}
+} */
 .tittle .text{
     display: flex;
     justify-content: space-between;
 }
 #consult{
-    margin-bottom: 0px;
-    margin-left: 50px;
-    margin-right: 50px;
+   margin: 0;
+   
+    width: 100%;
 }
-#consult #history{
-    margin-left: 0px;
-    
-    
-}
+
 
 #consult .first h2{
     font-size: 30px;
-    margin-left: 10px;
+    
     margin-bottom: 0;
     padding: 10px;
-    width: 450px;
+    
+    text-align: center;
 }
-#consult .first h3{
+#consult #history .title-hitory .second hr{
+    width: 100%;
+}
+/* #consult .first h3{
     margin-left: 400px;
     width: 280px;
     margin-bottom: 0;
     margin-right: 50px;
-}
+} */
 
 .consult-content{
     margin-top: 0;
     display: flex;
-    margin-left: 120px;
-    margin-bottom: 40px;
+   justify-content: center;
+    
+    bottom: 100px;
     
     
 }
 
 .consult-content img{
-    width: 345px;
-    height: 450px;
+    width: 33%;
+    height: 80vh;
+    border-radius: 20px;
+    
     margin-top: 15px;
 }
 
@@ -717,7 +780,7 @@ body{
 }
 #policy{
     width: 15px;
-    margin-top: 60px;
+   
 }
 .consult-content form .policy label{
     font-size: 12px;
@@ -755,7 +818,7 @@ body{
     background-color: rgb(14, 68, 99);
     align-items: center;
     margin-left: 20%;
-    height: 180px;
+    height: auto;
     margin-top: 40px;
     border-radius: 15px;
     color: var(--white);
@@ -766,10 +829,10 @@ body{
 }
 
 .subscribe form input{
-    width: 140px;
-    height: 30px;
+    width: 55%;
+    height: 6vh;
     border: 1px solid rgb(14, 68, 99);
-    border-radius: 3px;
+    border-radius: 10px;
     margin: 5px;
     background-color: var(--silver);
 }
@@ -779,7 +842,7 @@ body{
     padding-left: 10px;
 }
 .subscribe form button{
-    width: 135px;
+    width: 55%;
     height: 35px;
     border-radius: 6px;
     border: 1px solid rgb(14, 68, 99);
@@ -789,7 +852,7 @@ body{
     background-color: #777777;
 }
 #foot{
-    color: var(--silver);
+    color: var(--white);
     padding-left: 50px;
     padding-right: 50px;
     margin: 0;
@@ -814,13 +877,13 @@ body{
 #foot .info .info-one p{
     font-size: 10px;
     margin-right: 35px;
-    color: var(--silver);
+    color: var(--white);
     line-height: 2;
 }
 hr{
     opacity: 0.2;
-    height: 145px;
-    margin-bottom: 0;
+    
+    margin-bottom: 1%;
     margin-top: 50px;
 }
 
@@ -833,7 +896,7 @@ hr{
 #foot .info .info-two p{
     font-size: 10px;
     line-height: 1.5;
-    color: var(--silver);
+    color: var(--white);
 }
 
 #foot .info .info-two h4{
@@ -857,7 +920,7 @@ hr{
     grid-template-rows: repeat(2, 1fr);
 }
 #foot .info .info-three .linkss a{
-    color: var(--silver);
+    color: var(--white);
     font-size: 12px;
     width: 100px;
     row-gap: 10px;
@@ -886,4 +949,426 @@ hr{
     height: 50px;
     color: white;
     font-size: 12px;
+}
+
+
+
+/* login */
+
+#containt{
+    width: 50%;
+    margin-left: 25%;
+    margin-left: 25%;
+    border: 1px solid var(--primary);
+   
+    margin-bottom: 80px;
+    border-radius: 30px;
+    margin-top: 5%;
+    
+}
+
+#containt h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+#containt h1 span{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+#containt hr{
+    width: 100%;
+    border: 1px solid;
+    height: 2px;
+}
+
+#containt form{
+    width: 80%;
+     margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+
+
+}
+#containt form div{
+    display: flex;
+    justify-content: space-between;
+}
+#containt form div a{
+    text-align: right;
+    color: var(--primary);
+    position: relative;
+    top: 30px;
+}
+#containt form input{
+    height: 6vh;
+    border-radius: 8px;
+    border: 1px solid var(--silver);
+    margin-bottom: 10px;
+
+    
+   
+}
+#containt form label{
+    margin-top: 30px;
+}
+#containt form button{
+    border-radius: 8px;
+    border: 1px solid var(--silver);
+    height: 6vh;
+    background-color: var(--primary);
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+#containt form p{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#containt form p a{
+    color: var(--primary);
+    font-weight: 600;
+    
+}
+
+/* sign up */
+
+#containt .or{
+    display: flex;
+    font-size: 20px;
+}
+#containt .or p{
+   
+    margin-top: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#containt .bouton{
+    display: flex;
+    justify-content: center;
+}
+
+#containt .bouton a{
+    border: 1px solid var(--muted);
+    margin-left: 30px;
+    padding: 7px;
+    width: 23%;
+    font-size: 15px;
+    border-radius: 10px;
+    color: #333;
+}
+#containt .bouton a img{
+    width: 12%;
+
+}
+#containt  p{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: 550;
+}
+#containt  p a{
+    color: var(--primary);
+    font-weight: 600;
+    
+}
+#containt form .policy{
+    display: flex;
+    flex-direction: row;
+}
+#containt form .policy label{
+    position: relative;
+    right: 43%;
+    bottom: 17px;
+    font-size: 1rem;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width:590px){
+    #entete{
+        width: 100%;
+        
+    }
+     #entete ul, button{
+        display: none;
+     }
+     #head{
+        padding-left: 5%;
+        padding-right: 5%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid black;
+     }
+     #head .logo img{
+        width: 150px;
+     }
+     
+     #head a i{
+        font-size: 30px;
+        position: relative;
+        top: 30px;
+        color: black;
+        
+     }
+     
+     #service{
+        display: flex;
+        flex-direction: column-reverse;
+     }
+
+     #service .right{
+        width: 100%;
+     }
+     #service .right img{
+        
+        width: 83%;
+     }
+     #service .left{
+        width: 100%;
+        text-align: center;
+        
+     }
+     #service .left h1{
+        font-size: 25px;
+     }
+     #service .left p{
+        font-size: 13px;
+        width: 100%;
+     }
+     #service .left h1 span{
+        font-size: 25px;
+     }
+     #service .left .bttn{
+        margin-left: 35%;
+     }
+     #service .left .bttn button{
+        font-size: 0.7rem;
+        width: 160px;
+        display: block;
+        border-radius: 15px;
+       
+     }
+
+     #get-service{
+        display: flex;
+        flex-direction: column;
+        padding-left:30px ;
+        padding-right: 30px;
+     }
+
+     #get-service .title{
+        text-align: center;
+     }
+    
+   
+     #get-service .links div{
+        width: 230px;
+        height: 16vh;
+        padding: 18px;
+     }
+     #get-service .links div a{
+        font-size: 10px;
+     }
+     #Provide{
+        display: flex;
+        flex-direction: column;
+        
+        
+     }
+     #Provide .img{
+        width: 90%;
+     }
+     #Provide .img img{
+        display: block;
+        width: 80%;
+     }
+     #Provide .list{
+        display: flex;
+        flex-direction: column;
+     }
+     #Provide h2{
+        margin-right: 130px;
+     }
+     #special .elements{
+        display: flex;
+        flex-direction: column;
+     }
+    
+     #special .elements .tem p{
+       font-size: 15px;
+       padding-left: 30px;
+       padding-right: 30px;
+       margin-bottom: 20px;
+        
+     }
+     #special .elements .item6{
+        padding-bottom: 20px;
+     }
+
+     #history .our-history{
+        display: flex;
+        flex-direction: column;
+     }
+
+     #history .our-history img{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-radius: 20px;
+     }
+     #history .our-history .our{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-radius: 20px;
+        margin-top: 30px;
+     }
+     #meet {
+        height: 250vh;
+     }
+     #meet .doctor{
+        display: flex;
+        flex-direction: column;
+     }
+     #meet .doctor div img{
+        width: 150px;
+     }
+     #meet .doctor div{
+        width: 60%;
+        margin-bottom: 20px;
+        height: 50vh;
+        margin-left: 18%;
+        
+
+     }
+     #meet .doctor div button{
+        width: 100px;
+        display: block;
+        position: relative;
+        left: 48px;
+        bottom: 10px;
+     }
+     #consult .consult-content img{
+        display: none;
+     }
+     #consult .consult-content form div{
+        display: flex;
+        flex-direction: column;
+
+     }
+     #consult .consult-content input, select{
+        width: 350px;
+        height: 7vh;
+     }
+     #consult .consult-content label{
+        font-size: 15px;
+     }
+     #consult .consult-content form .policy{
+        display: flex;
+     }
+
+     
+     #consult .consult-content form textarea{
+        width: 350px;
+     }
+     #consult .consult-content form button{
+        width: 350px;
+        display: block;
+        
+     }
+
+     #subscribe{
+        width: 100%;
+     }
+     #subscribe .subscribe{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-left: 45px;
+        margin-right: 45px;
+     }
+     #subscribe .subscribe h3{
+        font-size: 10px;
+        width: 100%;
+     }
+     #subscribe .subscribe form {
+        width: 100%;
+     }
+     #subscribe .subscribe form input{
+        width: 100%;
+        margin-left: 25px;
+
+     }
+     #subscribe .subscribe form button{
+        display: block;
+        font-size: 8px;
+        position: relative;
+        left: 35%;
+     }
+     #foot .info{
+        flex-direction: column;
+     }
+     #foot .info hr{
+        width: 80%;
+     }
+
+     #foot .info .info-one{
+        margin-left: 40px;
+     }
+     #containt{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+     }
+     #containt  .bouton a{
+        width: 120px;
+        font-size: 12px;
+        
+     }
+     #containt form .policy label{
+        
+        font-size: 15px;
+        position: relative;
+        left: 0px;
+        
+     }
+     #containt form .policy input{
+        position: relative;
+        right: 0;
+     }
+
+     #head .entete #menu{
+        display: flex;
+        position: absolute;
+        top: 60px;
+        left: 40%;
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        flex-direction: column;
+        z-index: 1000;
+        overflow: hidden;
+     }
+     #head a:visited i{
+        color: #516EFF;
+        cursor: pointer;
+     }
+
+     #head .entete #menu{
+        max-width: 15px 0;
+     }
+     #head .entete #menu li{
+        padding-bottom: 30px;
+     }
+   
 }

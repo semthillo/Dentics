@@ -6,21 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dental Clinic</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header id="head">
-        <nav id="entete">
+        <nav id="entete" class="entete">
             <div class="logo">
                 <img src="images/Logo.png" alt="logo">
             </div>
-            <ul>
+            <ul id="menu">
+                <!-- <li><img src="images/close-line (1).svg" alt=""></li> -->
                 <li><a href="#">Home</a></li>
                 <li><a  href="#">Services</a></li>
                 <li><a  href="#">About us</a></li>
-                <li><a  href="#">Register</a></li>
+                <li><a  href="#">Appoinment</a></li>
+                <li><a  href="#">Sign Up</a></li>
             </ul>
-            <button class="appoienment">Appoinment</button>
+            <button class="appoienment">Login</button>
+           
         </nav>
+         <a href="#"><i class='bx bx-menu' onclick="toggleMenu()"></i></a>
     </header> 
 
     <section id="service">
@@ -30,12 +35,12 @@
             </h1>
             <p>Appropriately embrace transparent materials via <br>turnkey niche markets.</p>
             <div class="bttn">
-                <button>Get Started</button>
-                <button>Learn More</button>
+                <button>Make An Appoinment</button>
+                
             </div>
         </div>
         <div class="right">
-            <img src="images/illustrationss.png" alt="doctor" >
+            <img src="images/dental-pexels-photo-6627462.jpeg" alt="doctor" >
         </div>
     </section>  
 
@@ -86,17 +91,13 @@
 
         <div class="text">
             <h3>
-                What Makes Us More
+                OUR <span>SERVICES</span>
             </h3>
-            <h2>
-                KEY <span>FEATURE</span>
-            </h2>
+           
 
             </div>
             <div class="specials">
-                <h3>
-                    Special
-                </h3> 
+                
                 <hr class="line"></hr>
             
             </div>
@@ -135,10 +136,10 @@
                 <h6>Crown and Bridge</h6>
                 <p>Transform you blackish gum to pinkish coulour with painless, single appointment Laser Gum Treatment</p>
             </div>
-        
+        </div>
     </section>  
 
- <section id="smile">
+ <!-- <section id="smile">
         <h3>Let Us Brigthen <span>Your Smile!</span></h3>
         <div >
             <p>
@@ -147,23 +148,21 @@
         </div>
         
         <button>Make An Appoinment</button>
-    </section> 
+    </section>  -->
      <section id="history">
         <div class="title-hitory">
             <div class="first">
                 <h2>WHO <span>WE ARE</span></h2>
-                 <h3>Our Glorious </h3>
+                 
             </div>
             <div class="second">
                 <hr/>
-                <h3>
-                 History
-                </h3>
+                
             </div>
             
         </div>
         <div class="our-history">
-            <img src="images/Close_up_smiley_patient_at_appointment.png" alt="history">
+            <img src="images/types-dentistry-specialties-feature.png" alt="history">
             <div class="our">
                 <h4>Our history</h4>
                 <p>Dentics is a well-know name in dental and oral care in New York. The journey of this institution Startedin 1990 under the hands of Dr. Jonathon Doe, Gold medalist of Harvard University. Dentics dental center has been leading the way in dental treatmentin USA for more than 3Oyears in keeping with the evolution of time and the modernization of the era.</p>
@@ -174,18 +173,14 @@
    <section id="meet">
             <div id="special">
                 <div class="text">
-                    <h3>
-                        Meet Some of our
-                    </h3>
+                  
                     <h2 >
                         MEET OUR <span>DOCTORS</span>
                     </h2>
 
             </div>
             <div class="specials">
-                <h3>
-                    Brains
-                </h3> 
+                
                 <hr class="line"></hr>
             </div>
 
@@ -230,7 +225,7 @@
         </div>
     </section> 
  
-    <section id="client-says">
+    <!-- <section id="client-says">
         <div class="image">
              <img src="images/customer.png" alt="customer">
              <h5>Samantha Payne</h5>
@@ -243,21 +238,19 @@
             <span>. . .</span>
         </div>
        
-    </section> 
+    </section>  -->
 
      <section id="consult">
         <div id="history">
             <div class="title-hitory">
                 <div class="first">
                     <h2
-                    >MAKE AN <span>APPOINMENT</span></h2>
-                     <h3>Consult with our </h3>
+                    >APPOINMENT</h2>
+                     
                 </div>
                 <div class="second">
                     <hr/>
-                    <h3>
-                     Doctor
-                    </h3>
+                    
                 </div>
                 
             </div>
@@ -265,18 +258,18 @@
         </div> 
 
         <div class="consult-content">
-            <img src="images/contact.png" alt="contact" >
+            <img src="images/doctor-with-tablet-computer.jpg" alt="contact" >
             <form >
                 <div>
                     <div>
                         <label for="name">Name</label>
-                <input type="text" id="name" name="name" required placeholder="Full name">
+                    <input type="text" id="name" name="name" required placeholder="Full name">
                     </div>
                     <div>
                          <label for="phone">Phone</label>
                         <select class="tel">
                             <option value="+01" >+01</option>
-                            <input type="tel" name="phone" id="phone" placeholder="(555) 000-000">
+                            <input type="tel" name="phone" id="phone" placeholder="(555) 000-000"  >
                         </select>
                     </div>
                     <div>
@@ -284,11 +277,13 @@
                         <input type="date" id="date" name="date" required>
                     </div>
                     <div><label for="doctor">Doctor</label>
-                <select name="doctor" id="doctor">
+                    <select name="doctor" id="doctor">
                     <option value="Dr. Pritis Barua">Dr. Pritis Barua</option>
-                </select>
-            </div>
-        </div>
+                    </select>
+                </div>
+                </div>
+                
+        
                 
                 <label for="message">Message</label>
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Include a message..."></textarea>
@@ -297,7 +292,7 @@
                     <label for="policy">You agree to our friendly privacy policy</label>
                 </div>
                 
-                <button>Confirm Appoinment</button>
+                <button>I Confirm </button>
                 
             </form>
         </div>
@@ -355,5 +350,7 @@
     <footer class="foote">
                 <p>© 2001-2022, All Rights Reserved</p>
     </footer>  
+<!-- <script src="script.js"></script> -->
 </body>
+
 </html>
