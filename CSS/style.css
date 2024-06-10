@@ -1080,6 +1080,9 @@ hr{
     width: 12%;
 
 }
+body{
+    overflow-x: hidden;
+}
 #containt  p{
     text-align: center;
     font-weight: 500;
@@ -1159,6 +1162,7 @@ input::placeholder{
        
         
      }
+    
      #service .left h1{
         font-size: 25px;
         width: 90%;
@@ -1290,6 +1294,9 @@ input::placeholder{
      }
      #consult .consult-content img{
         display: none;
+     }
+     #consult .consult-content form{
+        margin-right: 50px;
      }
      #consult .consult-content form div{
         display: flex;
@@ -1429,7 +1436,11 @@ input::placeholder{
      #head .entete #menu{
         max-width: 15px 0;
      }
+     #head .entete #menu li:first-child{
+        margin-top: 30px;
+     }
      #head .entete #menu li{
+       
         padding-bottom: 30px;
      }
      #head .entete #menu li button{
