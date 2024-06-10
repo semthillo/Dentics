@@ -129,7 +129,7 @@ body{
 
 #service .left .bttn button{
     width: 30%;
-    height: 7vh;
+    height: 40px;
     margin-right: 40px;
     border-radius: 5px;
     border: 1px solid var(--primary);
@@ -795,7 +795,7 @@ body{
 }
 
 .consult-content form button{
-    height: 35px;
+    height: 40px;
     border-radius: 8px;
     border: 1px solid var(--muted);
     color: var(--white);
@@ -837,20 +837,25 @@ body{
     display: flex;
 }
 .subscribe form input{
-    width: 55%;
+    /* width: 55%;
     height: 6vh;
     border: 1px solid rgb(14, 68, 99);
-    border-radius: 10px;
+    border-radius: 10px; */
+
+    width: 200px;
+    height: 35px;
+    border-radius: 6px;
+    border: 1px solid var(--silver);
     margin: 5px;
     background-color: var(--silver);
 }
 .subscribe form input::placeholder{
     font-size: 10px;
     color: white;
-    padding-left: 10px;
+    padding-left: 30px;
 }
 .subscribe form button{
-    width: 55%;
+    width: 45%;
     height: 35px;
     border-radius: 6px;
     margin-top: 5px;
@@ -1151,10 +1156,12 @@ input::placeholder{
      #service .left{
         width: 100%;
         text-align: center;
+       
         
      }
      #service .left h1{
         font-size: 25px;
+        width: 90%;
      }
      #service .left p{
         font-size: 13px;
@@ -1164,13 +1171,14 @@ input::placeholder{
         font-size: 25px;
      }
      #service .left .bttn{
-        margin-left: 35%;
+        margin-left: 28%;
      }
      #service .left .bttn button{
         font-size: 0.7rem;
         width: 160px;
         display: block;
-        border-radius: 15px;
+        border-radius: 8px;
+        
        
      }
 
@@ -1187,8 +1195,8 @@ input::placeholder{
     
    
      #get-service .links div{
-        width: 230px;
-        height: 16vh;
+        width: 25%;
+        height: 120px;
         padding: 18px;
      }
      #get-service .links div a{
@@ -1267,7 +1275,7 @@ input::placeholder{
      #meet .doctor div{
         width: 60%;
         margin-bottom: 20px;
-        height: 50vh;
+        height: 300px;
         margin-left: 18%;
         
 
@@ -1278,6 +1286,7 @@ input::placeholder{
         position: relative;
         left: 48px;
         bottom: 10px;
+        
      }
      #consult .consult-content img{
         display: none;
@@ -1322,26 +1331,26 @@ input::placeholder{
     
      .polici label{
         position: relative;
-        bottom: 18px;
+        bottom: 20px;
      }
 
      #subscribe{
         width: 100%;
      }
      #subscribe .subscribe{
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
+        width: 100%;
+        margin-left: 2%;
+        margin-right: 2%;
         padding-left: 45px;
-        margin-right: 45px;
+        padding-right: 45px;
         display: flex;
         flex-direction: column;
      }
      #subscribe .subscribe h3{
-        font-size: 15px;
+        font-size: 20px;
         text-align: center;
         width: 100%;
-        margin-left: 55px;
+        /* margin-left: 55px; */
      }
      #subscribe .subscribe form {
         width: 100%;
@@ -1350,14 +1359,14 @@ input::placeholder{
      }
      #subscribe .subscribe form input{
         width: 100%;
-        margin-left: 25px;
+        /* margin-left: 25px; */
 
      }
      #subscribe .subscribe form button{
         display: block;
         font-size: 8px;
         position: relative;
-        left: 35%;
+        left: 28%;
      }
      #foot .info{
         flex-direction: column;
