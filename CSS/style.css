@@ -8,13 +8,16 @@
     --muted: #777777;
     --whiteBG: #F8FAFC;
 }
-
+#entete ul  li button{
+    display: none;
+}
 *{
     font-family: sans-serif;
     font-weight: 300;
     box-sizing: border-box;
     
 }
+
 a{
     text-decoration: none;
     
@@ -822,12 +825,15 @@ body{
     margin-top: 40px;
     border-radius: 15px;
     color: var(--white);
+    display: flex;
     
 }
 .subscribe h3{
     font-size: 23px;
 }
-
+.subscribe form{
+    display: flex;
+}
 .subscribe form input{
     width: 55%;
     height: 6vh;
@@ -1306,6 +1312,8 @@ hr{
      }
      #subscribe .subscribe form {
         width: 100%;
+        display: flex;
+        flex-direction: column;
      }
      #subscribe .subscribe form input{
         width: 100%;
@@ -1374,5 +1382,9 @@ hr{
      #head .entete #menu li{
         padding-bottom: 30px;
      }
+     #head .entete #menu li button{
+        display: block;
+        width: 100%;
+    }
    
 }

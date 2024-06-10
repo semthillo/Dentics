@@ -1,11 +1,4 @@
-// let menu = document.querySelector('.bx-menu')
-// let entete = document.querySelector('.entete')
-// menu.onclick = function () {
-//     // menu.classList.toggle('')
-//     entete.classList.toggle('ul')
 
-    
-// }
 
 let menu = document.getElementById("menu")
 menu.style.maxHeight="0px"
@@ -20,4 +13,15 @@ function toggleMenu(){
 }
 
 
+// var bttn = bttn.document.getElementById('log');
 
+// // Ajoutez un écouteur d'événements pour le clic sur le bouton
+// bttn.addEventListener('click', function() {
+//     // Redirigez vers une autre page
+//     window.location.href = 'login.html';
+// });
+
+function redirectToPage() {
+    // Redirection vers l'URL souhaitée
+    window.location.href = "login.html";
+  }

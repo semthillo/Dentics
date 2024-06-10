@@ -20,3 +20,5 @@ le depot contient :
 L'utilisation du site est aussi simple pour le propriétaire que le client. 
 
 ![capture de la page d'accueil](images/images/Capture1.jpeg)
+![capture de la page de login](images/images/Capture2.jpeg)
+![capture de la page de sign up](images/images/Capture3.jpeg)
