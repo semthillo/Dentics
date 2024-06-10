@@ -232,6 +232,7 @@ body{
     display: flex ;
     
 }
+
 #Provide .img{
     width: 50%;
     
@@ -714,7 +715,7 @@ body{
 }
 
 .consult-content img{
-    width: 33%;
+    width: 26%;
     height: 80vh;
     border-radius: 20px;
     
@@ -826,6 +827,7 @@ body{
     border-radius: 15px;
     color: var(--white);
     display: flex;
+    flex-direction: column;
     
 }
 .subscribe h3{
@@ -851,6 +853,7 @@ body{
     width: 55%;
     height: 35px;
     border-radius: 6px;
+    margin-top: 5px;
     border: 1px solid rgb(14, 68, 99);
 
 }
@@ -1099,6 +1102,9 @@ hr{
     display: none;
     
 }
+input::placeholder{
+    padding-left: 10px;
+}
 /* RESPONSIVE */
 
 @media (max-width:590px){
@@ -1205,8 +1211,14 @@ hr{
         display: flex;
         flex-direction: column;
      }
-     #Provide h2{
-        margin-right: 130px;
+     #Provide .provide h2{
+        position: relative;
+        right: 100px;
+        
+            width: 100%;
+            font-size: 1rem;
+            
+        
      }
      #special .elements{
         display: flex;
@@ -1283,9 +1295,21 @@ hr{
         font-size: 15px;
      }
      #consult .consult-content form .policy{
-        display: flex;
+        display: inline;
+        width: 100%;
+        
      }
-
+     #consult .consult-content form .policy input{
+        width: 18px;
+        
+     }
+     #consult .consult-content form .policy label{
+        font-size: 14px;
+        margin: auto 0;
+        padding: 0;
+        position: relative;
+        bottom: 16px;
+     }
      
      #consult .consult-content form textarea{
         width: 350px;
@@ -1294,6 +1318,11 @@ hr{
         width: 350px;
         display: block;
         
+     }
+    
+     .polici label{
+        position: relative;
+        bottom: 18px;
      }
 
      #subscribe{
@@ -1305,10 +1334,14 @@ hr{
         margin-right: 5%;
         padding-left: 45px;
         margin-right: 45px;
+        display: flex;
+        flex-direction: column;
      }
      #subscribe .subscribe h3{
-        font-size: 10px;
+        font-size: 15px;
+        text-align: center;
         width: 100%;
+        margin-left: 55px;
      }
      #subscribe .subscribe form {
         width: 100%;
@@ -1340,23 +1373,31 @@ hr{
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
+        text-align: center;
      }
      #containt  .bouton a{
         width: 120px;
-        font-size: 12px;
+        font-size: 10px;
         
      }
-     #containt form .policy label{
+      /* #containt form .policy {
         
         font-size: 15px;
         position: relative;
         left: 0px;
+        display: flex;
         
-     }
-     #containt form .policy input{
-        position: relative;
-        right: 0;
-     }
+     } 
+     #containt form .consult-content form .policy{
+        display: flex;
+       
+        
+    
+    }
+    #policy{
+        width: 15px;
+       
+    } */
 
      #head .entete #menu{
         display: flex;
